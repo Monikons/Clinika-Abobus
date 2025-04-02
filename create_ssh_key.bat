@@ -8,7 +8,8 @@ set /p key_type="Enter subname for key (example, deploy, github): "
 
 set filename=%timestamp%_%key_type%
 
-ssh-keygen -t ed25519 -f "%CD%\%filename%" -N ""
+ssh-keygen -t ed25519 -C "Monikons <runikita52@gmail.com>" -f "%CD%\%filename%" -N ""
+
 
 if not exist ".gitignore" echo. > .gitignore
 findstr /C:"%filename%" .gitignore >nul || echo %filename%>> .gitignore
