@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Ветеринарная клиника "Заботливый друг"</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f9f9f9;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        section {
+            margin-bottom: 20px;
+        }
+        .service {
+            background-color: #e0f7fa;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer; /* Указываем, что это кликабельный элемент */
+        }
+        .service a {
+            text-decoration: none;
+            color: #00796b;
+        }
+        form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        label {
+            margin-top: 10px;
+            display: block;
+        }
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #00796b;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+        button:hover {
+            background-color: #004d40;
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+        }
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #00796b;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Ветеринарная клиника "Заботливый друг"</h1>
+        <p>Мы заботимся о здоровье ваших питомцев!</p>
+    </header>
+    
+    <section>
+        <h2>Наши услуги</h2>
+        <div class="service">
+            <a href="appointment.html?service=preventive">Профилактические осмотры - 1500₽</a>
+        </div>
+        <div class="service">
+            <a href="appointment.html?service=vaccination">Вакцинация - 1200₽</a>
+        </div>
+        <div class="service">
+            <a href="appointment.html?service=treatment">Лечение заболеваний - от 2000₽</a>
+        </div>
+        <div class="service">
+            <a href="appointment.html?service=surgery">Хирургические операции - от 5000₽</a>
+        </div>
+    </section>
+    
+    <section>
+        <h2>Оставить отзыв</h2>
+        <button onclick="document.getElementById('review-form').style.display='block'">Написать отзыв</button>
+        
+        <form id="review-form" style="display:none;">            <label for="name">Ваше имя:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="treatment">Как вы проходили лечение, из-за чего попали к нам?</label>
+            <textarea id="treatment" name="treatment" rows="4" required></textarea>
+            
+            <label for="outcome">Что получилось после лечения, как улучшилось состояние питомца?</label>
+            <textarea id="outcome" name="outcome" rows="4" required></textarea>
+            
+            <button type="submit">Отправить отзыв</button>
+            <button type="button" onclick="document.getElementById('review-form').style.display='none'">Закрыть</button>
+        </form>
+    </section>
+    
+    <footer>
+        <nav>
+            <a href="appointment.html">Запись на прием</a>
+            <a href="support.html">Техническая поддержка</a>
+            <a href="complaint.html">Подать жалобу</a>
+            <a href="payment.html">Оплата услуг</a>
+            <a href="registration.html">Регистрация</a>
+        </nav>
+        <div class="registration-button">
+            <button onclick="window.location.href='registration.html'">Регистрация</button>
+        </div>
+    </footer>
+</body>
+</html>
